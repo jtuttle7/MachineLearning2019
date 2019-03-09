@@ -24,11 +24,15 @@ The general inputs to these functions are as follows:
 Inputs : 
 
 trn_data    - The training dataset (as data.frame, directly from read_csv)
-wgts        - A vector containing the weights to be updated during training. This is automatically 		
+
+wgts        - A vector containing the weights to be updated during training. This is automatically 
 			  initialized for the first training instance.
 lrnRate 	- A hyper parameter for tuning the learning process
+
 tol 		- The tolerance of change in weight vectors to determine when training is complete
+
 totCst 		- Vector containing the cost vector value for each epoch of training
+
 labelInd 	- Column index of labels in dataset (base 1)
 
 Returns : 
@@ -48,13 +52,16 @@ The general inputs to these functions are as follows:
 Inputs : 
 
 testdata 	- a data.frame (directly from read_csv) containing the test data
+
 model_wgts  - Weight vector determined from training 
+
 labelInd 	- Column index of labels in dataset (base 1)
 
 
 Returns :
 
 SSE 		- The total cost of the test data set
+
 Preds 		- The prediction of each feature in the test data
 
 

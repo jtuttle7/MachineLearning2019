@@ -20,10 +20,15 @@ The general inputs to these functions are as follows:
 Inputs : 
 
 trn_data       	- The training dataset (as data.frame, directly from read_csv)
+
 iters          	- The number of training iterations to perform, or number of bagged/boosted/random trees to build
+
 numericColInds 	- Column indexes of numeric (continous) data, to be processed using median of column (base 1)
+
 PurityMethod 	- Which method of information gain to use. Options are "Entropy", "Majority Error", or "GINI"
+
 missingData_ID 	- Vector containing ID of missiing data, by default = NA
+
 labelInd 	- Column index of labels in dataset (base 1)
 
 Returns : 
@@ -33,6 +38,7 @@ Each training function returns a list containing the trained trees. These are us
 Inputs unique to bagged training
 
 bagPct 		- The percentage of the train data to use for training each bagged tree
+
 w_replace 	- Should the model replace data for sampling within each bag? (T or F)
 
 Inputs unique to random forest training
@@ -56,10 +62,15 @@ The general inputs to these functions are as follows:
 Inputs : 
 
 model 		- Model of the relevant form, this will be the model attribute from the output list of the train function
+
 testdata 	- a data.frame (directly from read_csv) containing the test data
+
 numericColInds 	- Column indexes of numeric (continous) data, to be processed using median of column (base 1)
+
 missingData_ID 	- Vector containing ID of missiing data, by default = NA. Must correspond with that used during training
+
 numericOut 	- Identify if output predictions should be of class "numeric" (T or F)
+
 labelInd 	- Column index of labels in dataset (base 1)
 
 
