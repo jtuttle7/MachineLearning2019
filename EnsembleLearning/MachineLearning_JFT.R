@@ -17,6 +17,13 @@ if(!dplyr_Flag){
 }
 
 
+# NOTES
+# Proces to push to Github
+# git add -A
+# git commit -m "Message"
+# git push
+
+
 # Functions ----
 
 info_gain <- function(S_purity,weights,subS_purity){
