@@ -2,7 +2,7 @@
 
 # Librarys ----
 
-
+source("MachineLearning_JFT.R")
 
 # *** ----
 
@@ -11,61 +11,61 @@
 
 # Functions ----
 
-entrpy <- function(probs){
-  
-  if(is.na(sum(probs))){
-    return(0)
-  }
-  
-  val <- 0
-  
-  for(i in 1:length(probs)){
-    
-    if(probs[i] == 0){
-      
-    }else{
-      val <- val + probs[i]*log(probs[i],2)
-    }
-    
-  }
-  
-  result <- -val
-  
-  return(result)
-  
-}
-
-
-
-
-
-# majorError <- function(data,col_inds){
+# entrpy <- function(probs){
 #   
+#   if(is.na(sum(probs))){
+#     return(0)
+#   }
 #   
+#   val <- 0
 #   
+#   for(i in 1:length(probs)){
+#     
+#     if(probs[i] == 0){
+#       
+#     }else{
+#       val <- val + probs[i]*log(probs[i],2)
+#     }
+#     
+#   }
+#   
+#   result <- -val
+#   
+#   return(result)
+#   
+# }
+# 
+# 
+# 
+# 
+# 
+# # majorError <- function(data,col_inds){
+# #   
+# #   
+# #   
+# #   
+# #   
+# # }
+# 
+# 
+# 
+# 
+# info_gain <- function(S_purity,weights,subS_purity){
+#   
+#   subS_sum <- 0
+#   
+#   for(i in 1:length(subS_purity)){
+#     
+#     subS_sum <- subS_sum + weights[i]*subS_purity[i]
+#     
+#   }
+#   
+#   gain <- S_purity - subS_sum
+#   
+#   return(gain)
 #   
 #   
 # }
-
-
-
-
-info_gain <- function(S_purity,weights,subS_purity){
-  
-  subS_sum <- 0
-  
-  for(i in 1:length(subS_purity)){
-    
-    subS_sum <- subS_sum + weights[i]*subS_purity[i]
-    
-  }
-  
-  gain <- S_purity - subS_sum
-  
-  return(gain)
-  
-  
-}
 
 
 # *** ----
